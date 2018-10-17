@@ -33,19 +33,20 @@ CONFIG = YAML.load_file(File.dirname(__FILE__) + "/config/#{ENVIRONMENT_TYPE}.ym
 
 ## register driver according with browser chosen
 Capybara.register_driver :selenium do |app|
+  
   Selenium::WebDriver.logger.level = :error
   Selenium::WebDriver.logger.output = "log/selenium.log"
+  
   if HEADLESS.eql?('headless')
     caps = Selenium::WebDriver::Remote::Capabilities.chrome(loggingPrefs: {browser: 'ALL'})
     option = ::Selenium::WebDriver::Chrome::Options.new(args: ['--headless', '--disable-gpu', '--start-maximized'])
     session = Capybara::Selenium::Driver.new(app, browser: :chrome, options: option, desired_capabilities: caps)
   elsif HEADLESS.eql?('no_headless')
-    Selenium::WebDriver.logger.level = :debug
-    Selenium::WebDriver.logger.output = 'selenium.log'
     caps = Selenium::WebDriver::Remote::Capabilities.chrome(loggingPrefs: {browser: 'ALL'})
     option = ::Selenium::WebDriver::Chrome::Options.new(args: ['--disable-infobars', '--start-maximized'])
     session = Capybara::Selenium::Driver.new(app, browser: :chrome, options: option, desired_capabilities: caps)
   end
+  
 end
 
 Capybara.configure do |config|
