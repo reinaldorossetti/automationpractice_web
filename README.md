@@ -116,11 +116,11 @@ Cucumber executes executable specifications written in plain language and produc
 **To know if your bdd is long, it should contain up to 5 steps of the same type.**
 
 
-**Logs:** 
-In computing, data logging is an expression used to describe the process of recording relevant events in a computer system.
+**Logs:**  
+In computing, data logging is an expression used to describe the process of recording relevant events in a computer system.  
 
-- Generates Cucumber HTML Report with logs.
-- Get the browser and Selenium logs.
+- Generates Cucumber HTML Report with logs.  
+- Get the browser and Selenium logs.  
 
 #### References:  
 https://docs.cucumber.io/gherkin/reference/  
