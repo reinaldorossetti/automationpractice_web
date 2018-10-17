@@ -4,6 +4,7 @@ require 'fileutils'
 =begin 
   I call Modulo Helper generic functions used in Page to not repeat them.
   Don’t Repeat Yourself (DRY).
+  Each function has docstring
 =end
 
 module Helper
