@@ -34,7 +34,8 @@ module Helper
     $logger.error(ex) # armazena o erro em logs.
   end
 
-  # sub function ajax wait
+  # Sub function ajax wait
+  # @return [Boolean] return True or False.
   def finished_all_ajax_requests?
     page.evaluate_script('jQuery.active').zero?
   end
@@ -42,7 +43,7 @@ module Helper
   # Custom Function select box with visible false, for hidden elements.
   # @param [String] locator
   # @param [String] option_value
-  # @return [void] return void or error message.
+  # @return [Void] return void or error message.
   def select_custom(locator:, option_value:)
     find(locator, visible: false).first(:option, option_value.to_s, visible: false).select_option
   rescue => ex
