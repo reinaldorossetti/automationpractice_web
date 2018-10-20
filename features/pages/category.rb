@@ -5,7 +5,7 @@ class Category < SitePrism::Page
   element :menu_women_elem, '#block_top_menu a[title="Women"][href*="category"]'
   element :catalog_elem, '#layered_block_left p[class="title_block"]'
   elements :products_elems, 'a[class="product-name"]'
-  element :submit_bt_elem, 'button[type="submit"] spanxx'
+  element :submit_bt_elem, 'button[type="submit"] span'
 
   def menu(menu_string)
     case menu_string
