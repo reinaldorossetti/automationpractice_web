@@ -1,5 +1,10 @@
 require_relative '../framework/helper.rb'
 
+Before do |scenario|
+  include Capybara::DSL
+  $logs = page.driver.browser.manage.logs.get(:browser)
+end
+
 After do |scenario|
   scenario_name = scenario.name.gsub(/[^A-Za-z ]/, '').gsub(/\s+/, '_')
 
