@@ -65,6 +65,3 @@ RSpec.configure do |config|
   config.default_retry_count = 3
   config.exceptions_to_retry = [Net::ReadTimeout]
 end
-
-include Capybara::DSL
-$logs = page.driver.browser.manage.logs.get(:browser)
