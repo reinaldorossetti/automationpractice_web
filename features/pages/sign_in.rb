@@ -69,9 +69,9 @@ class SignIn < SignInElements
     last_name_elem.set @last_name
     pass_elem.set @pass
     # converte pra inteiro pra remover o zero da frente do numero.
-    select_custom(locator: @@select_dia, option_value: dia.to_i)
-    select_value(locator: @@select_mes, option_value: mes.to_i)
-    select_custom(locator: @@select_ano, option_value: ano)
+    select_custom(@@select_dia, dia.to_i)
+    select_value(@@select_mes, mes.to_i)
+    select_custom(@@select_ano, ano)
   end
 
   # como estou checando varios valores prefiro fazer dessa forma.
