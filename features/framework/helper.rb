@@ -44,7 +44,7 @@ module Helper
   # @param [String] locator
   # @param [String] option_value
   # @return [Void] return void or error message.
-  def select_custom(locator:, option_value:)
+  def select_custom(locator, option_value)
     find(locator, visible: false).first(:option, option_value.to_s, visible: false).select_option
   rescue => ex
     p ex
@@ -56,7 +56,7 @@ module Helper
   # @param [String] locator
   # @param [String] option_value
   # @return [void] return void or error message.
-  def select_value(locator:, option_value:)
+  def select_value(locator, option_value)
     find(locator, visible: false).find("option[value='#{option_value}']").select_option
   rescue => ex
     p ex
