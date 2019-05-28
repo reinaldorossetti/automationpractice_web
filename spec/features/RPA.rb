@@ -7,8 +7,8 @@ describe 'Realizar uma compra com sucesso' do
 
   it 'Realizar uma compra com sucesso' do
 
-    page_tshirts = Ttshirts.new
-    page_tshirts.menu
+    page_tshirts = Category.new
+    page_tshirts.menu('T-shirts') 
 
     expect(page_tshirts.catalog_elem.text).to eq 'CATALOG'
 
