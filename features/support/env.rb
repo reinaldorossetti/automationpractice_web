@@ -42,10 +42,6 @@ Capybara.configure do |config|
   config.default_max_wait_time = 30
 end
 
-SitePrism.configure do |config|
-  config.use_implicit_waits = true
-end
-
 # tratamento de erro.
 RSpec.configure do |config|
   config.verbose_retry = true
