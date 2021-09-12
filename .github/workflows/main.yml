@@ -30,5 +30,6 @@ jobs:
           bundler-cache: true
       - name: Run tests
         run: |
+             pwd
              ls -la
              bundle exec cucumber -p default
