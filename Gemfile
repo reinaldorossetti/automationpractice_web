@@ -8,4 +8,5 @@ gem 'rspec-retry', '0.6.2'
 gem 'site_prism', '~> 3.7', '>= 3.7.2'
 gem 'money','6.13.8'
 gem 'allure-cucumber', '~> 0.5.8'
+gem 'webdrivers', '~> 4.0', require: false
 gem 'mimemagic', '~> 0.4.3'
