@@ -14,13 +14,9 @@ jobs:
   test:
     strategy:
       matrix:
-        os: [macos-latest, windows-latest]
+        os: [macos-latest]
         # Due to https://github.com/actions/runner/issues/849, we have to use quotes for '3.0'
-        ruby: [2.6,'3.0']
-        include:
-          - os: ubuntu-latest
-            ruby: jruby
-
+        ruby: [2.6]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
@@ -34,4 +30,5 @@ jobs:
           bundler-cache: true
       - name: Run tests
         run: |
+             ls -la
              bundle exec cucumber -p default
