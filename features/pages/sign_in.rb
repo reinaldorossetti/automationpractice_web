@@ -7,7 +7,7 @@ class SignIn < SignInElements
 
   # inicializa os dados via instancia, o que vamos precisar.
   def initialize
-    @arr_of_arrs = CSV.read(__dir__ + "/../../data/data.csv")
+    @arr_of_arrs = CSV.read($projectPath + "/features/data/data.csv")
     @endereco = @arr_of_arrs[0][6]
     @state = @arr_of_arrs[0][8]
     @city = @arr_of_arrs[0][7]

@@ -19,6 +19,9 @@ $total = nil # vai armazenar o total do produto no site.
 ENVIRONMENT_TYPE = ENV['ENVIRONMENT_TYPE']
 HEADLESS = ENV['HEADLESS']
 
+$projectPath = File.dirname(__FILE__) + "../../"
+puts $projectPath
+
 CONFIG = YAML.load_file(File.dirname(__FILE__) + "/config/#{ENVIRONMENT_TYPE}.yml")
 
 ## register driver according with browser chosen
