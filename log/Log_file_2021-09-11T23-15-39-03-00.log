@@ -1,0 +1,101 @@
+E, [11-09-2021 23:15:42#10192] ERROR -- : session not created: This version of ChromeDriver only supports Chrome version 90
+Current browser version is 93.0.4577.63 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe (Selenium::WebDriver::Error::SessionNotCreatedError)
+Backtrace:
+	Ordinal0 [0x008BC013+2474003]
+	Ordinal0 [0x008529C1+2042305]
+	Ordinal0 [0x00762F68+1060712]
+	Ordinal0 [0x0078188E+1185934]
+	Ordinal0 [0x0077D600+1168896]
+	Ordinal0 [0x0077AA83+1157763]
+	Ordinal0 [0x007AA2A2+1352354]
+	Ordinal0 [0x007A8FAA+1347498]
+	Ordinal0 [0x007A66DB+1337051]
+	Ordinal0 [0x00783427+1192999]
+	Ordinal0 [0x007842EE+1196782]
+	Ordinal0 [0x00784279+1196665]
+	GetHandleVerifier [0x00A496FC+1590332]
+	GetHandleVerifier [0x00AF8614+2306900]
+	GetHandleVerifier [0x00949E93+543699]
+	GetHandleVerifier [0x009492CE+540686]
+	Ordinal0 [0x008586BA+2066106]
+	Ordinal0 [0x0085D1C8+2085320]
+	Ordinal0 [0x0085D308+2085640]
+	Ordinal0 [0x008667F3+2123763]
+	BaseThreadInitThunk [0x7582FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77157A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77157A4E+238]
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:72:in `assert_ok'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/response.rb:34:in `initialize'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `new'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:88:in `create_response'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/default.rb:114:in `request'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/http/common.rb:64:in `call'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/bridge.rb:167:in `execute'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/bridge.rb:102:in `create_session'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/remote/bridge.rb:56:in `handshake'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/chrome/driver.rb:43:in `initialize'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver.rb:46:in `new'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver/common/driver.rb:46:in `for'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/selenium-webdriver-3.142.7/lib/selenium/webdriver.rb:88:in `for'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara/selenium/driver.rb:83:in `browser'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara/selenium/driver.rb:156:in `save_screenshot'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara/session.rb:735:in `block in save_screenshot'
+<internal:kernel>:90:in `tap'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/capybara-3.35.3/lib/capybara/session.rb:735:in `save_screenshot'
+C:/Users/reina/OneDrive/Documents/portifolio_projetos/automationpractice_web/features/framework/helper.rb:19:in `take_screenshot'
+C:/Users/reina/OneDrive/Documents/portifolio_projetos/automationpractice_web/features/support/hooks.rb:11:in `block in <top (required)>'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-7.0.0/lib/cucumber/glue/invoke_in_world.rb:36:in `instance_exec'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-7.0.0/lib/cucumber/glue/invoke_in_world.rb:36:in `block in cucumber_instance_exec_in'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-7.0.0/lib/cucumber/glue/invoke_in_world.rb:50:in `cucumber_run_with_backtrace_filtering'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-7.0.0/lib/cucumber/glue/invoke_in_world.rb:26:in `cucumber_instance_exec_in'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-7.0.0/lib/cucumber/glue/hook.rb:22:in `invoke'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-7.0.0/lib/cucumber/runtime/after_hooks.rb:23:in `block (2 levels) in after_hooks'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/action.rb:23:in `execute'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/action.rb:56:in `skip'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/step.rb:31:in `skip'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/runner.rb:131:in `execute'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/runner.rb:53:in `execute'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/runner.rb:29:in `test_step'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/step.rb:23:in `describe_to'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/case.rb:31:in `block (3 levels) in describe_to'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/case.rb:30:in `each'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/case.rb:30:in `block (2 levels) in describe_to'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-7.0.0/lib/cucumber/filters/prepare_world.rb:23:in `block in test_case'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/around_hook.rb:21:in `execute'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/runner.rb:106:in `execute'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/runner.rb:53:in `execute'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/runner.rb:36:in `around_hook'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/around_hook.rb:12:in `describe_to'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/case.rb:80:in `block (2 levels) in compose_around_hooks'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/case.rb:81:in `compose_around_hooks'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/case.rb:29:in `block in describe_to'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/runner.rb:19:in `test_case'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/case.rb:28:in `describe_to'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-7.0.0/lib/cucumber/filters/prepare_world.rb:11:in `test_case'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/case.rb:28:in `describe_to'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/filter.rb:57:in `test_case'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-7.0.0/lib/cucumber/filters/retry.rb:18:in `test_case'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/case.rb:28:in `describe_to'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-7.0.0/lib/cucumber/filters/quit.rb:11:in `test_case'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/case.rb:28:in `describe_to'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-7.0.0/lib/cucumber/filters/broadcast_test_run_started_event.rb:21:in `block in done'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-7.0.0/lib/cucumber/filters/broadcast_test_run_started_event.rb:20:in `map'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-7.0.0/lib/cucumber/filters/broadcast_test_run_started_event.rb:20:in `done'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/filter.rb:62:in `done'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/filter.rb:62:in `done'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/filter.rb:62:in `done'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/filter.rb:62:in `done'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/filter.rb:62:in `done'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/filter.rb:62:in `done'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/filters/locations_filter.rb:20:in `done'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/filter.rb:62:in `done'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/test/filters/tag_filter.rb:18:in `done'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/compiler.rb:31:in `done'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core/gherkin/parser.rb:46:in `done'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core.rb:35:in `parse'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-core-10.0.1/lib/cucumber/core.rb:24:in `compile'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-7.0.0/lib/cucumber/runtime.rb:79:in `run!'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-7.0.0/lib/cucumber/cli/main.rb:29:in `execute!'
+C:/Ruby30/lib/ruby/gems/3.0.0/gems/cucumber-7.0.0/bin/cucumber:9:in `<top (required)>'
+C:/Ruby30/bin/cucumber:23:in `load'
+C:/Ruby30/bin/cucumber:23:in `<main>'
