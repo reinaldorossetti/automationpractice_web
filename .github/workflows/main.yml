@@ -32,5 +32,6 @@ jobs:
         run: |
              brew install shared-mime-info
              gem install mimemagic
+             gem install allure-cucumber -v 0.4.4
              bundle exec cucumber -p default
              ls -la
