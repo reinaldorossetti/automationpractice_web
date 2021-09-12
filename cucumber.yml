@@ -1,6 +1,6 @@
 ## YAML Templatesss
 ---
-default: -p pretty -p html -p no_headless -p hmg
+default: --format AllureCucumber::Formatter --out=report/allure-results -p pretty -p html -p no_headless -p hmg 
 
 pretty: --format pretty
 ci:  --format progress
