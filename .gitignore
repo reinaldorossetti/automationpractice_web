@@ -26,3 +26,4 @@ File::NULL
 *.json
 *.html
 *.png
+*.log
