@@ -8,7 +8,7 @@ class SignIn < SignInElements
   # inicializa os dados via instancia, o que vamos precisar.
   def initialize
     p @path = File.join(File.dirname(__FILE__), '../../', '/features/data/data.csv')
-    @arr_of_arrs = CSV.read(@path)
+    p @arr_of_arrs = CSV.read(@path)
     @endereco = @arr_of_arrs[0][6]
     @state = @arr_of_arrs[0][8]
     @city = @arr_of_arrs[0][7]

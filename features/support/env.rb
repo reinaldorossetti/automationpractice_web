@@ -7,6 +7,7 @@ require 'rspec/retry'
 require 'money'
 require 'csv'
 require "allure-cucumber"
+require 'webdrivers/chromedriver'
 require_relative '../framework/helper.rb'
 require_relative 'page_helper.rb'
 
@@ -16,13 +17,13 @@ World(Helper)
 
 Money.locale_backend = :i18n
 I18n.enforce_available_locales = false
+Webdrivers.install_dir = './webdrivers/install/dir'
+Webdrivers::Chromedriver.required_version = "93.0.4577.63"
+Webdrivers::Chromedriver.update
 
 $total = nil # vai armazenar o total do produto no site.
 ENVIRONMENT_TYPE = ENV['ENVIRONMENT_TYPE']
 HEADLESS = ENV['HEADLESS']
-
-$projectPath = File.dirname(__FILE__).replace("features")[0]
-puts $projectPath
 
 CONFIG = YAML.load_file(File.dirname(__FILE__) + "/config/#{ENVIRONMENT_TYPE}.yml")
 
@@ -54,22 +55,11 @@ RSpec.configure do |config|
   config.exceptions_to_retry = [Net::ReadTimeout]
 end
 
-AllureCucumber.configure do |config|
-  config.results_directory = "../../report/allure-results"
-  config.clean_results_directory = true
-  config.logging_level = Logger::INFO
-  config.logger = Logger.new($stdout, Logger::DEBUG)
-  config.environment = "staging"
-
-  # these are used for creating links to bugs or test cases where {} is replaced with keys of relevant items
-  config.link_tms_pattern = "http://www.jira.com/browse/{}"
-  config.link_issue_pattern = "http://www.jira.com/browse/{}"
-
-  # additional metadata
-  # environment.properties
-  config.environment_properties = {
-    custom_attribute: "foo"
-  }
-  # categories.json
-  config.categories = File.new("my_custom_categories.json")
+# Allure
+AllureCucumber.configure do |c|
+  c.clean_results_directory = true
+  c.link_tms_pattern = 'https://example.org/tms/{}'
+  c.link_issue_pattern = 'https://example.org/issue/{}'
+  c.tms_prefix = 'TMS_'
+  c.issue_prefix = 'ISSUE_'
 end

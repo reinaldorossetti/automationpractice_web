@@ -17,7 +17,6 @@ module Helper
     file_path = "results/screenshots/test_#{test_result}"
     screenshot = "#{file_path}/#{file_name}.png"
     page.save_screenshot(screenshot)
-    embed(screenshot, 'image/png', 'Click here')
   rescue => ex
     p ex
     $logger.error(ex) # armazena o erro em logs.

@@ -3,7 +3,7 @@
 @all
 Funcionalidade: Realizar todo o Processo de compra num e-commerce.
 
-  @comprar
+  @comprar @TMS_QA-123 @ISSUE_BUG-123
   Cenário: Realizar uma compra com sucesso.
     Dado que eu esteja no site de compras.
     Quando escolher um produto qualquer na loja.
