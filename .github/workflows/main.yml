@@ -34,6 +34,4 @@ jobs:
           bundler-cache: true
       - name: Run tests
         run: |
-             gem install bundler
-             bundle install 
              bundle exec cucumber -p default
