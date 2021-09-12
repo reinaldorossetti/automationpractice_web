@@ -30,6 +30,7 @@ jobs:
           bundler-cache: true
       - name: Run tests
         run: |
-             pwd
-             ls -la
+             brew install shared-mime-info
+             gem install mimemagic
              bundle exec cucumber -p default
+             ls -la
