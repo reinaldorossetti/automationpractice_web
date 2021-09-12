@@ -25,13 +25,11 @@ jobs:
           node-version: '14'
       - name: Install operating system dependencies
         run: npx playwright install-deps |
-             npm install -g allure-commandline --save-dev
-             npm install -g webdriver-manager
-             webdriver-manager start
+         npm install -g allure-commandline --save-dev
       - name: Set up Ruby
         # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
         # change this to (see https://github.com/ruby/setup-ruby#versioning):
-      - uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         # uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
         with:
           ruby-version: ${{ matrix.ruby }}
@@ -43,13 +41,3 @@ jobs:
              gem install allure-cucumber
              bundle exec cucumber -p default
              ls -la
-      - name: 📊 Step 5 - Collect Allure files and generate allure-report folder
-      - run: |
-          allure generate ./report/allure-results -o allure-report/
-      - name: Deploy
-      - uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages  # default: gh-pages
-          publish_dir: allure-report
-          destination_dir: ${{ matrix.browser}}
