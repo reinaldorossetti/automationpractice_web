@@ -19,7 +19,7 @@ $total = nil # vai armazenar o total do produto no site.
 ENVIRONMENT_TYPE = ENV['ENVIRONMENT_TYPE']
 HEADLESS = ENV['HEADLESS']
 
-$projectPath = File.dirname(__FILE__) + "../../"
+$projectPath = File.dirname(__FILE__).replace("features")[0]
 puts $projectPath
 
 CONFIG = YAML.load_file(File.dirname(__FILE__) + "/config/#{ENVIRONMENT_TYPE}.yml")
