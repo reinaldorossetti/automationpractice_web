@@ -34,18 +34,15 @@ jobs:
       - name: Install operating system dependencies
         run: |
          npm install -g allure-commandline --save-dev
-      - name: Set up Ruby
-        # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
-        # change this to (see https://github.com/ruby/setup-ruby#versioning):
-        uses: ruby/setup-ruby@v1
-        # uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
-          bundler-cache: true
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
       - name: Run tests
         run: |
              gem update --system 3.2.6 |
-             gem install allure-cucumber |
+             gem install cucumber |
              bundle exec cucumber -p default |
              ls -la
       - name: Step 4 - Get allure history
