@@ -22,8 +22,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
+      - uses: actions/checkout@v2
       - name: Install operating system dependencies
-        uses: actions/checkout@v2
+        run: sudo yum install ruby-devel
       - uses: browser-actions/setup-chrome@latest
       - run: chrome --version
       - uses: actions/setup-node@v2
