@@ -44,7 +44,7 @@ jobs:
         run: |
              gem update --system 3.2.6 |
              gem install cucumber |
-             bundle exec cucumber -p default |
+             bundle exec cucumber -p pretty -p dev -p no_headless |
              ls -la
       - name: Step 4 - Get allure history
         uses: actions/checkout@v2
