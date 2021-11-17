@@ -25,7 +25,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install operating system dependencies
         run: sudo apt-get update -y |
-             sudo apt-get install -y ruby-dev
+             sudo apt-get install ruby-full
       - uses: browser-actions/setup-chrome@latest
       - run: chrome --version
       - uses: actions/setup-node@v2
