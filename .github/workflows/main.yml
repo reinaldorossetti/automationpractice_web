@@ -8,7 +8,7 @@ on:
     branches:
       - master
   schedule:
-    - cron: "0 5 * * *"
+    - cron: "0 5 * * 5"
 
 jobs:
   test:
@@ -36,8 +36,9 @@ jobs:
           bundler-cache: true
       - name: Run tests
         run: |
-             brew install shared-mime-info
-             gem install mimemagic
-             gem install allure-cucumber
-             bundle exec cucumber -p default
+             gem update --system 3.2.6 |
+             brew install shared-mime-info |
+             gem install mimemagic |
+             gem install allure-cucumber |
+             bundle exec cucumber -p default |
              ls -la
